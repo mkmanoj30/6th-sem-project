@@ -1,0 +1,45 @@
+CREATE TABLE `projects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL UNIQUE,
+  `creater_name` varchar(32) NOT NULL,
+  `location` varchar(64) NOT NULL,
+  `contact_number` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+ `members` varchar(64) NOT NULL,
+ `requirements` varchar(64) NOT NULL,
+`start` date NOT NULL,
+`ending date` date NOT NULL,
+  `created` datetime NOT NULL,
+ 
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `register` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(64) NOT NULL,
+  `lastname` varchar(64) NOT NULL,
+`name` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+`location` varchar(64) NOT NULL,
+  `contact_number` varchar(64) NOT NULL,
+
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(32) NOT NULL,
+  `lastname` varchar(32) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `contact_number` varchar(64) NOT NULL,
+  `address` text NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `access_level` varchar(16) NOT NULL,
+  `access_code` text NOT NULL,
+  `status` int(11) NOT NULL COMMENT '0=pending,1=confirmed',
+  `created` datetime NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='admin and customer users';
