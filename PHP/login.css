@@ -1,0 +1,28 @@
+body {
+	
+    background-color:lightgrey;
+	
+}
+c{
+	position:relative;
+    left: 550px;
+    
+}
+b{
+font-family:Helvetica;
+}	
+	
+h{
+	position:relative;
+	display:block;
+color:DodgerBlue;
+margin-top:20px;
+margin-left:500px;
+font-size:15pt;
+
+}
+pre {
+  
+   font-size:15pt;
+ 
+}
